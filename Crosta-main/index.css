@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@font-face {
+    font-family: 'newsreader';
+    src: url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+}
+@font-face {
+    font-family: "perpetua";
+    src: url("https://db.onlinewebfonts.com/t/e228cb7a050591d3e95897146a2f2b92.eot");
+}
+
+:root {
+    --black-bg: #171515;
+    --coffee-bg: #FFE2AB;
+    --text-white: #fffef5;
+    --transparent-one: #1715157d;
+    
+}
+
+* {box-sizing: border-box}
+
+body {
+    background: var(--black-bg);
+    color: var(--text-white);
+    margin: 0px !important;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.navbar {
+    color: #FFE2AB;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    padding: 10px 0px;
+    width: 100%;
+    font-family: 'newsreader';
+    background-color: var(--transparent-one);
+    z-index: 5;
+}
+.nav span {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-white);
+}
+
+.nav+.head span{
+    color: #FFE2AB;
+    font-size: 30px;
+    padding: 0px 15px;
+}
+
+.cover {
+    margin: 120px 10% 10px;
+    display: flex;
+    flex-direction: row;
+}
+.cover-text-wrap {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    letter-spacing: 5%;
+}
+.text-main {
+    font-size: 3.75rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: 'perpetua';
+    color: #FFE2AB;
+
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+.cover-image-wrap {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+.cover-image-one {
+    z-index: -2;
+
+}
+.cover-image-two {
+    position: relative;
+    right: 250px;
+    bottom: 100px;
+    z-index: -1;
+}
+
+/* Story Section */
+.story {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 10% 10px;
+}
+
+.story-text-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+
+
+/* Menu */
+.menu {
+    width: 100% !important;
+    background-color: var(--coffee-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--black-bg);
+    font-family: 'newsreader';
+    padding: 80px 0px;
+    margin-top: 100px;
+    border: none;
+    outline: none;
+}
+.menu-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 50px;
+}
+.menu-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.menu-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+}
+.menu-details-container+.underline {
+    border-bottom: 1px solid var(--black-bg);
+}
+.menu-details-container > .menu-item {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.menu-item{
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s
+}
+
+.menu-item:hover{
+    color:#FFE2AB;
+    cursor: pointer;
+}
+.menu-bottom-img {
+    position: relative;
+    z-index: 2;
+    bottom: 4px;
+}
+
+.menu-subheading{
+    margin-top: 10%;
+    margin-bottom:20px ;
+}
+
+.btn {
+    margin-top: 7%;
+    display: inline-block;
+    background-color: var(--black-bg);
+    color: var(--coffee-bg);
+    padding: 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--coffee-bg);
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 24px;
+    font-family: "newsreader";
+    letter-spacing: 5%;
+    
+}
+
+.btn:hover {
+    background-color: var(--coffee-bg);
+    color: var(--black-bg);
+}
+
+.menu-bottom-img > img{
+    width: 100%;
+}
+.menu-action-text {
+    font-size: 3.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.menu-action-btn {
+    border: 1px solid var(--black-bg);
+    display: flex;
+    flex-direction: row;
+    padding: 8px 5px;
+    color: var(--black-bg);
+    width: 200px;
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    margin: 45px 0px;
+    cursor: pointer;
+}
+.menu-action-btn > span {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'newsreader';
+}
+
+/* Barista section */
+.barista {
+    margin: 80px 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.barista-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+}
+.text-sub {
+    margin-top: 18px;
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 28px;
+}
+.barista-btn {
+    margin-top: 32px;
+    font-size: 25px;
+    border: 1px solid var(--text-white);
+    background: transparent;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: var(--text-white);
+}
+.barista-image {
+    display: flex;
+    flex-direction: column;
+}
+.barista-image > span {
+    margin-top: 10px;
+    font-family: 'newsreader';
+}
+
+
+/* Barista section */
+.review {
+    background: var(--coffee-bg);
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.review-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    color: var(--black-bg);
+}
+.review-text-main {
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.review-text-sub {
+    margin-top: 18px;
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10%;
+    font-family: 'newsreader';
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+.logo-xl {
+    margin: 20px 0px;
+    justify-self: center;
+}
+.footer-info-container {
+    display: flex;
+    width: 80%;
+    margin: 50px 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+    max-width: 200px;
+}
+.grid .head {
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+.grid span {
+    margin: 5px 0px;
+} 
+.grid .underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.copyright {
+    text-align: center;
+}
+
+/* Review section*/
+.review-roller {
+    display: flex;
+    flex-direction: column;
+    color: var(--black-bg);
+    font-family: 'newsreader';
+    text-align: center;
+    background: var(--coffee-bg);
+    width: 100%;
+    padding: 50px 0px;
+}
+.review-roller-header {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'perpetua';
+}
+.roller-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 45px;
+}
+.testimonials-container,.testimonials-ex-border {
+    height: auto;
+}
+.testimonials-container {
+    padding: 15px;
+    max-width: 250px;
+    height: auto;
+    text-align: left;
+    border: 1px solid var(--black-bg);
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+.testimonial-from {
+    font-weight: bold;
+    font-style:italic;
+    text-decoration: underline;
+    margin: 10px 0px;
+} 
+/*
+.testimonials-ex-border {
+    height: 5px;
+    width: 300px;
+    border: 1px solid var(--black-bg);
+    position: relative;
+    bottom: 10px;
+    left: 30px;
+}
+*/
+
+.reviews-wrapper {
+    width: 350px;
+    height: auto;
+}
+
+
+/* MENU PAGE */
+
+/* Style the tab */
+.tab {
+    background-color: var(--black-bg);
+    float: left;
+    width: 70%;
+    height: 300px;
+  }
+
+  .tab-container{
+    margin-left: 100px; 
+    flex-direction: column;  
+    gap: 36px; 
+    display: flex;
+    width: 500px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    display: block;
+    background-color: var(--black-bg);
+    font-size: 22px;
+    font-family: 'newsreader';
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border-radius: 0px 15px px 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: #ffe2ab;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #252121;
+    color: #ffe2ab;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    margin-top:10px;
+  }
+
+.container-col-1{
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px; 
+    display: inline-flex
+}
+.sub-cat-h  {
+    color: var(--coffee-bg);
+    font-size: 38px; 
+    font-family: Newsreader; 
+    font-weight: 300; 
+    letter-spacing: 1.90px;
+ 
+}
+  .item-name, .item-price, .item-description {
+    font-size: 16px;
+    font-family: Newsreader;
+    letter-spacing: 0.90px;
+  }
+  
+  .item-name {
+    font-weight: 400;
+  }
+  
+  .item-price {
+    font-weight: 400;
+  }
+  
+  .item-description {
+    width: 280px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  .heading-1{
+     color: #FFE2AB; font-size: 52px;
+     font-family: Perpetua Titling MT; 
+     font-weight: 300; 
+     letter-spacing: 2.60px; 
+     word-wrap: break-word
+  }
+
+  /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-right .5s;
+    padding: 20px;
+  }
+
+  .name-price-container{
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 200px; 
+    display: inline-flex;
+  }
+
+  .counter {
+    height: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #252121;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex;
+}
+
+.counter > div {
+    color: #FFE2AB;
+    font-size: 18px;
+    font-family: Newsreader;
+    font-weight: 400;
+    letter-spacing: 0.90px;
+    word-wrap: break-word;
+}
+
+.decrement, .increment {
+    cursor: pointer;
+   
+}
+
+.decrement:hover, .increment:hover {
+    color: #fff;
+}
+
+.count {
+    width: 14px;
+    height: 15px;
+}
+
+.calc-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 435px;
+    display: inline-flex;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 38px;
+    display: inline-flex;
+}
+
+.column-la {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 38px;
+    display: inline-flex;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.total-label {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.90px;
+}
+
+.total-value {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.90px;
+}
+
+.button{
+    padding: 15px;
+    box-shadow: 0px 4px 0px black;
+    border: 1px rgba(255, 255, 255, 0.80) solid;
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 18px;
+    font-family: Newsreader;
+    font-weight: 500;
+    letter-spacing: 0.90px;
+    cursor: pointer;
+    background-color: #252121;
+}
+
+.button-sub{
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.80);
+    border: 1px rgba(255, 255, 255, 0.80) solid;
+    font-size: 18px;
+    font-family: Newsreader;
+    font-weight: 400;
+    letter-spacing: 0.90px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cart-item{
+    justify-content: flex-start; align-items: flex-start; gap: 40px; display: inline-flex; padding-bottom:50px;
+}
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        margin: 10px;
+    }
+
+    .nav.head {
+        order: -1;
+    }
+
+    .cover {
+        flex-direction: column;
+        align-items: center;
+        margin: 80px 5% 10px;
+    }
+
+    .cover-text-wrap {
+        text-align: center;
+    }
+
+    .text-main {
+        font-size: 2rem;
+    }
+
+    .cover-text-sub {
+        width: 80%;
+        letter-spacing: normal;
+    }
+
+    .cover-image-wrap {
+        width: 80%;
+    }
+
+    .story,
+    .barista,
+    .footer {
+        margin: 60px 5%;
+    }
+    .review {
+        background: var(--coffee-bg);
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .review-text {
+        max-width: 800px; /* Limit the width of the text */
+    }
+
+    .review-text-main {
+        font-size: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'perpetua';
+        color: var(--black-bg);
+        margin-bottom: 30px; /* Add some space between the main text and subtext */
+    }
+
+    .barista {
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        text-align: start; /* Center text */
+    }
+
+    .barista-text {
+        max-width: 110%; /* Limit the width of the text */
+        color:var(--white)
+    }
+
+
+    .story,
+    .menu {
+        flex-direction: column;
+    }
+
+    .story-image {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+    .review-image,
+    .barista-image {
+        display: none; /* Hide the image */
+    }
+
+    .story-text-wrap,
+    .menu-details {
+        width: 100%;
+    }
+
+    .menu-action,
+    .review-roller {
+        text-align: center;
+    }
+
+    .menu-details-container {
+        font-size: 1.5rem;
+    }
+
+    .text-main,
+    .review-roller-header {
+        font-size: 3rem;
+    }
+
+    .icon-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-info-container {
+        flex-direction: column;
+    }
+
+    .grid {
+        max-width: none;
+        margin-bottom: 30px;
+    }
+
+    .menu-bottom-img > img {
+        height: auto;
+        width: 80%;
+        
+    }
+
+    .logo-xl {
+        width: 300px; /* Adjust the width as needed */
+        margin-bottom: 20px; /* Add margin to separate from other elements */
+    }
+}
